@@ -1,5 +1,4 @@
-
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -24,7 +23,6 @@
       pointer-events: none;
     }
 
-    /* gradient overlay */
     .gradient-bg {
       position: fixed;
       top: 0;
@@ -36,7 +34,6 @@
       pointer-events: none;
     }
 
-    /* container e layout */
     .container {
       max-width: 1280px;
       margin: 0 auto;
@@ -55,7 +52,6 @@
       transform: translateY(0);
     }
 
-    /* header/nav minimal */
     nav {
       display: flex;
       justify-content: flex-end;
@@ -68,7 +64,6 @@
       color: #cdd9ff;
       text-decoration: none;
       font-weight: 500;
-      letter-spacing: 0.3px;
       transition: 0.25s;
       font-size: 1rem;
     }
@@ -78,7 +73,6 @@
       border-bottom: 2px solid #3b82f6;
     }
 
-    /* hero section */
     .hero {
       min-height: 85vh;
       display: flex;
@@ -182,7 +176,6 @@
       transform: translateY(-3px);
     }
 
-    /* section titles */
     .section-title {
       font-size: 2.4rem;
       font-weight: 700;
@@ -194,7 +187,13 @@
       display: inline-block;
     }
 
-    /* cards habilidades */
+    .section-subtitle {
+      color: #8aa2e0;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* skills grid */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -223,10 +222,8 @@
     .skill-card span {
       font-size: 1.2rem;
       font-weight: 600;
-      letter-spacing: -0.2px;
     }
 
-    /* cores específicas para cada tecnologia */
     .skill-card[data-tech="html"] i { color: #e34c26; }
     .skill-card[data-tech="css"] i { color: #264de4; }
     .skill-card[data-tech="js"] i { color: #f7df1e; }
@@ -245,7 +242,7 @@
       transform: scale(1.1);
     }
 
-    /* projetos */
+    /* projetos completos */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
@@ -309,6 +306,120 @@
       color: #b9d0ff;
     }
 
+    /* ========== NOVA SEÇÃO: CARDS REPOSITÓRIOS GITHUB ========== */
+    .repo-section {
+
+      background: linear-gradient(135deg, rgba(10, 14, 23, 0.6), rgba(5, 8, 18, 0.8));
+      border-radius: 2rem;
+      padding: 20px;
+    }
+
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .repo-card {
+      display: block;
+      background: rgba(18, 22, 40, 0.75);
+      backdrop-filter: blur(8px);
+      border-radius: 1.8rem;
+      padding: 1.8rem;
+      text-decoration: none;
+      color: #eef2ff;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: cardFadeIn 0.6s ease forwards;
+      animation-delay: calc(var(--i, 0) * 0.1s);
+    }
+
+    @keyframes cardFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .repo-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .repo-card:hover::after {
+      opacity: 1;
+    }
+
+    .repo-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      border-color: #3b82f6;
+      box-shadow: 0 25px 40px -12px rgba(59, 130, 246, 0.5);
+    }
+
+    .repo-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .repo-card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+
+    .repo-card p {
+      color: #b9cbff;
+      line-height: 1.5;
+      margin: 0.8rem 0;
+      font-size: 0.95rem;
+    }
+
+    .repo-tech-badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.2);
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      margin-top: 12px;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    .repo-arrow {
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.2rem;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .repo-card:hover .repo-arrow {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+
+    /* cores diferenciadas por categoria */
+    .repo-card[data-cat="c"] .repo-icon { color: #a8b9cc; text-shadow: 0 0 5px #5f7f9e; }
+    .repo-card[data-cat="js"] .repo-icon { color: #f7df1e; text-shadow: 0 0 5px #f7df1e80; }
+    .repo-card[data-cat="php"] .repo-icon { color: #777bb4; text-shadow: 0 0 5px #777bb4; }
+    .repo-card[data-cat="sql"] .repo-icon { color: #00758f; text-shadow: 0 0 5px #00758f; }
+    .repo-card[data-cat="complex"] .repo-icon { color: #c084fc; text-shadow: 0 0 5px #c084fc; }
+
     /* contato */
     .contact-links {
       display: flex;
@@ -344,7 +455,6 @@
       border-color: #3b82f6;
     }
 
-    /* scroll reveal + footer */
     footer {
       text-align: center;
       padding: 2rem 0;
@@ -353,7 +463,6 @@
       color: #8a9bcf;
     }
 
-    /* responsive */
     @media (max-width: 768px) {
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -374,5 +483,8 @@
       }
       nav {
         justify-content: center;
+      }
+      .repo-grid {
+        grid-template-columns: 1fr;
       }
     }
