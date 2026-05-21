@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Gustavo Ricardo · Dev Full Stack</title>
+  <title>Gustavo Ricardo · Dev Full Stack | Portfólio</title>
   <!-- Google Fonts & Font Awesome -->
+   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#skills">Habilidades</a>
     <a href="#projetos">Projetos</a>
+    <a href="#repositorios">Códigos</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -37,7 +38,7 @@
     </p>
     <div class="btn-group">
       <a href="#projetos" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Ver projetos</a>
-      <a href="#contato" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contato</a>
+      <a href="#repositorios" class="btn btn-outline"><i class="fab fa-github"></i> Explorar código</a>
     </div>
   </section>
 
@@ -52,83 +53,105 @@
       <p style="line-height: 1.6">
         Atualmente curso <strong>Análise e Desenvolvimento de Sistemas</strong> (FAETERJ) e possuo técnico em Informática para Internet pela FAETEC. 
         Além do desenvolvimento, tenho conhecimento em manutenção de PCs, redes, e ferramentas como Figma, Git e Workbench. 
-        Busco constantemente aprender novas tecnologias e aplicar design patterns no dia a dia.
+        Busco constantemente aprender novas tecnologias.
       </p>
     </div>
   </section>
 
-  <!-- Habilidades cards animados -->
-  <section id="skills">
-    <h2 class="section-title">⚡ Minhas Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill-card" data-tech="html"><i class="fab fa-html5"></i><span>HTML5</span></div>
-      <div class="skill-card" data-tech="css"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-      <div class="skill-card" data-tech="js"><i class="fab fa-js"></i><span>JavaScript</span></div>
-      <div class="skill-card" data-tech="php"><i class="fab fa-php"></i><span>PHP</span></div>
-      <div class="skill-card" data-tech="sql"><i class="fas fa-database"></i><span>SQL (MySQL)</span></div>
-      <div class="skill-card" data-tech="c"><i class="fas fa-code"></i><span>linguagem C</span></div>
+  <!-- Habilidades -->
+<section id="repositorios" class="repo-section">
+    <h2 class="section-title">📂 Minhas Habilidades</h2>
+    <p class="section-subtitle">Demonstro minhas habilidades na prática por meio de projetos reais. Os códigos estão disponíveis e abertos para exploração, permitindo uma visão clara da minha lógica, organização e evolução como desenvolvedor.</p>
+    <div class="repo-grid">
+      
+      <!-- Card: Projetos em C -->
+      <a href="https://github.com/gustavoricardoti2006-ctrl/projetos_C./tree/main" target="_blank" class="repo-card" data-cat="c" style="--i:1">
+        <div class="repo-icon"><i class="fas fa-code"></i></div>
+        <h3>⚙️ Projetos em C</h3>
+        <p>Exercícios e sistemas desenvolvidos na linguagem C: structs, manipulação de arquivos, lógica de programação e algoritmos.</p>
+        <span class="repo-tech-badge"><i class="fas fa-tag"></i> C · Estruturas · Arquivos</span>
+        <div class="repo-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Card: Projetos em JavaScript -->
+      <a href="https://github.com/GustavoRicardoTI/js-interativo" target="_blank" class="repo-card" data-cat="js" style="--i:2">
+        <div class="repo-icon"><i class="fab fa-js"></i></div>
+        <h3>✨ JavaScript</h3>
+        <p>Interações web, manipulação de DOM, validações, consumo de APIs e lógica avançada no front-end.</p>
+        <span class="repo-tech-badge"><i class="fas fa-tag"></i> JS · DOM · APIs</span>
+        <div class="repo-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Card: Projetos em PHP -->
+      <a href="https://github.com/gustavoricardoti2006-ctrl/projetos.PHP" target="_blank" class="repo-card" data-cat="php" style="--i:3">
+        <div class="repo-icon"><i class="fab fa-php"></i></div>
+        <h3>🐘 PHP (Back-end)</h3>
+        <p>CRUD completo, sessões, autenticação, integração com banco de dados e lógica de servidor.</p>
+        <span class="repo-tech-badge"><i class="fas fa-tag"></i> PHP · PDO · MVC</span>
+        <div class="repo-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Card: Projetos em SQL -->
+      <a href="https://github.com/gustavoricardoti2006-ctrl/projetos.banco_de_dados" target="_blank" class="repo-card" data-cat="sql" style="--i:4">
+        <div class="repo-icon"><i class="fas fa-database"></i></div>
+        <h3>📊 SQL & Banco de Dados</h3>
+        <p>Consultas complexas, modelagem relacional, procedures, triggers e otimização de queries.</p>
+        <span class="repo-tech-badge"><i class="fas fa-tag"></i> MySQL · PostgreSQL</span>
+        <div class="repo-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Card: Projetos Complexos -->
     </div>
-    <div style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-      <span style="background:#19233f; padding: 6px 18px; border-radius: 50px;"><i class="fab fa-git-alt"></i> Git</span>
-      <span style="background:#19233f; padding: 6px 18px; border-radius: 50px;"><i class="fab fa-figma"></i> Figma</span>
-      <span style="background:#19233f; padding: 6px 18px; border-radius: 50px;"><i class="fas fa-chart-line"></i> Bootstrap</span>
-      <span style="background:#19233f; padding: 6px 18px; border-radius: 50px;"><i class="fas fa-plug"></i> APIs</span>
-    </div>
+    <p style="text-align: center; margin-top: 2.5rem; color: #7c8ec2;">
+      <i class="fab fa-github"></i> Todos os repositórios estão públicos — fique à vontade para explorar, clonar e contribuir!
+    </p>
   </section>
 
-  <!-- Projetos (baseado no currículo) -->
+  <!-- Projetos Completos -->
   <section id="projetos">
-    <h2 class="section-title">🚀 Projetos em Destaque</h2>
+    <h2 class="section-title">🚀 Projetos realizados/em processo</h2>
     <div class="projects-grid">
       <div class="project-card">
         <div class="project-title">📅 Agendamentos Virtuais</div>
-        <p>Sistema completo de agendamento online (TCC). Integração com API de pagamento, consulta CEP automática, manipulação dinâmica de horários.</p>
+        <p>Sistema completo com API de pagamento, consulta CEP automática e manipulação dinâmica de horários.</p>
         <div class="project-tech">
           <span class="tech-badge">PHP</span>
           <span class="tech-badge">MySQL</span>
           <span class="tech-badge">JavaScript</span>
           <span class="tech-badge">API REST</span>
         </div>
-        <div style="margin-top: 12px;"><i class="fas fa-code-branch"></i> Full Stack · UI responsiva</div>
       </div>
       <div class="project-card">
-        <div class="project-title">🎨 Gerenciador para Tatuador</div>
-        <p>Sistema de gestão de clientes, agendamentos e finanças. Backend em PHP, frontend com HTML/CSS/JS e otimização da experiência do usuário.</p>
+        <div class="project-title">🐾 PetCare · Gestão de Pets</div>
+        <p>Plataforma para tutores organizarem rotina de pets, agendar em veterinárias e visualizar petshops próximos com geolocalização.</p>
         <div class="project-tech">
           <span class="tech-badge">PHP</span>
           <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">Google Maps API</span>
           <span class="tech-badge">Bootstrap</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🎨 Gerenciador para Tatuador</div>
+        <p>Sistema de gestão de clientes, agendamentos e finanças. Backend robusto e UI responsiva.</p>
+        <div class="project-tech">
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">MySQL</span>
           <span class="tech-badge">JavaScript</span>
         </div>
-        <div style="margin-top: 12px;"><i class="fas fa-palette"></i> UI moderna · gestão completa</div>
       </div>
-     <div class="project-card">
-  <div class="project-title">🐾 PetCare · Sistema de Gerenciamento de Pets</div>
-  <p>Plataforma completa onde tutores organizam a rotina dos seus pets, agendam consultas em clínicas veterinárias próximas e descobrem petshops parceiros com avaliações em tempo real.</p>
-  <div class="project-tech">
-    <span class="tech-badge">PHP</span>
-    <span class="tech-badge">MySQL</span>
-    <span class="tech-badge">JavaScript</span>
-    <span class="tech-badge">Google Maps API</span>
-    <span class="tech-badge">Bootstrap</span>
-  </div>
-  <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 16px;">
-    <span><i class="fas fa-calendar-check"></i> Controle de vacinas</span>
-    <span><i class="fas fa-map-marker-alt"></i> Geo-localização</span>
-    <span><i class="fas fa-heart"></i> Lembretes automáticos</span>
-  </div>
-
-      
-
+    </div>
   </section>
+
+  
 
   <!-- Contato -->
   <section id="contato">
     <h2 class="section-title">📫 Vamos Conversar</h2>
     <div class="contact-links">
       <a href="mailto:gustavoricardoti2006@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> Email</a>
-      <a href="www.linkedin.com/in/gustavo-ricardo-16756133a" class="contact-card" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="" class="contact-card" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/gustavo-ricardo-16756133a" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/GustavoRicardoTI" target="_blank" class="contact-card"><i class="fab fa-github"></i> GitHub</a>
       <a href="#" class="contact-card"><i class="fab fa-whatsapp"></i> (21) 96876-4516</a>
     </div>
     <p style="text-align: center; margin-top: 2rem; color: #8aa2e0;"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro - RJ · Disponível remoto ou presencial</p>
@@ -138,7 +161,6 @@
     <p>© 2025 Gustavo Ricardo — Tecnologia & criatividade em código.</p>
   </footer>
 </div>
-
 
 <script src="java.js"></script>
 </body>
